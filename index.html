@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ridge Glider & Angel</title>
+<meta name="description" content="Ridge Glider and his tactical laptop co-pilot Angel take on Colorado's highest, coldest passes. A paper-cutout animated comedy from Park County.">
+<meta property="og:title" content="Ridge Glider & Angel">
+<meta property="og:description" content="A paper-cutout animated comedy from Park County, Colorado. Top stays down.">
+<meta property="og:image" content="hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a pinned-up paper cork board — banner, logline, crew snapshots, a route card for the pilot, then the channel */
+:root{
+  --paper:#f2efe6; --card:#fffdf6; --ink:#1f2a26; --muted:#5b6862; --rule:#d8d3c4;
+  --pine:#24493d; --blaze:#e2601c; --cyan:#0f8ea0; --sky:#8fd0ec;
+  --display:"Bowlby One","Arial Black",Impact,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --paper:#131917; --card:#1c2421; --ink:#eaeee8; --muted:#9daaa3; --rule:#2d3934;
+  --pine:#86c7ae; --blaze:#ff8a4c; --cyan:#53d4e4; --sky:#1e3a46; color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 var(--body);
+  background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1px);background-size:5px 5px}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--cyan)}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+.hero{background:var(--sky)}
+.hero img{width:100%;max-width:1600px;margin:0 auto;aspect-ratio:1600/525;object-fit:cover}
+.intro{padding-block:40px 8px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.eyebrow{font:500 13px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--blaze)}
+h1{font:400 clamp(38px,6.5vw,72px)/1 var(--display);color:var(--pine);margin:.2em 0 .25em;text-wrap:balance}
+h1 span{color:var(--cyan)}
+.lede{font-size:21px;max-width:34em;margin:0 0 22px}
+.cta{display:inline-flex;gap:10px;align-items:center;background:var(--blaze);color:#fff;text-decoration:none;
+  font-weight:700;padding:12px 20px;border:2px solid var(--ink);border-radius:8px;box-shadow:3px 3px 0 var(--ink)}
+.cta:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.cta:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.panel{background:var(--card);padding:10px 10px 6px;box-shadow:0 6px 18px rgba(0,0,0,.18);transform:rotate(2deg);margin:0}
+.panel figcaption{font:500 12px/1.4 var(--mono);color:var(--muted);padding:8px 2px 2px;text-align:center}
+section{padding-block:56px 8px}
+h2{font:400 clamp(28px,4vw,40px)/1.05 var(--display);color:var(--pine);margin:0 0 6px;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 28px;max-width:40em}
+.crew{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:34px 26px}
+.snap{background:var(--card);padding:10px 10px 16px;box-shadow:0 5px 14px rgba(0,0,0,.16);margin:0;min-width:0;transition:transform .2s}
+.snap:nth-child(3n+1){transform:rotate(-1.6deg)}
+.snap:nth-child(3n+2){transform:rotate(1.2deg)}
+.snap:nth-child(3n){transform:rotate(-.6deg)}
+.snap:hover{transform:rotate(0) scale(1.02)}
+.snap .ph{aspect-ratio:4/5;overflow:hidden;background:var(--sky)}
+.snap .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.snap .ph.todo{display:grid;place-items:center;text-align:center;font:500 13px/1.5 var(--mono);color:var(--muted);
+  background:repeating-linear-gradient(45deg,var(--paper) 0 12px,var(--card) 12px 24px)}
+.snap h3{font:400 21px/1.1 var(--display);margin:14px 0 2px}
+.role{font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blaze);margin:0 0 8px}
+.snap p{margin:0;font-size:16px;line-height:1.5}
+.sled{display:inline-block;margin-top:10px;font:500 12px/1 var(--mono);padding:5px 8px;border:1px solid var(--rule);border-radius:4px;color:var(--muted)}
+.route{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:26px 24px;overflow-x:auto}
+.route ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(140px,1fr));gap:0;min-width:840px;position:relative}
+.route li{position:relative;padding:0 14px 0 0}
+.route li::before{content:"";display:block;height:4px;background:var(--pine);margin:0 0 14px;border-radius:2px}
+.route li:last-child::before{background:var(--blaze)}
+.route .n{font:500 12px/1 var(--mono);color:var(--muted)}
+.route b{display:block;font:400 17px/1.15 var(--display);margin:6px 0 4px}
+.route .el{font:500 13px/1 var(--mono);color:var(--blaze);font-variant-numeric:tabular-nums}
+.route p{font-size:15px;line-height:1.45;margin:8px 0 0;color:var(--muted)}
+.quote{margin:30px 0 0;padding:18px 22px;border-left:4px solid var(--cyan);background:var(--card);font-family:var(--mono);font-size:16px}
+.quote cite{display:block;font:italic 400 14px var(--body);color:var(--muted);margin-top:6px}
+.channel{display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between;background:var(--pine);color:#fff;border-radius:12px;padding:30px 28px;margin-top:8px}
+.channel h2{color:#fff;margin:0}
+.channel p{margin:6px 0 0;opacity:.85}
+footer{padding-block:48px 56px;color:var(--muted);font-size:14px}
+@media (max-width:760px){.intro{grid-template-columns:1fr}.panel{max-width:440px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.snap{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero"><img src="hero.jpg" alt="Ridge Glider and Angel, paper-cutout portraits in front of snowy Colorado mountains" width="1600" height="525"></header>
+
+<main>
+<div class="wrap intro">
+  <div>
+    <div class="eyebrow">An animated comedy from Park County, Colorado</div>
+    <h1>Ridge Glider <span>&amp; Angel</span></h1>
+    <p class="lede">A mountain rider who never puts the top up, and the tactical laptop co-pilot who has opinions about that. Together they take on Colorado's highest, coldest passes with too much coffee and not enough sense.</p>
+    <a class="cta" href="https://www.youtube.com/@RidgeGliderShow">▶ Watch on YouTube</a>
+  </div>
+  <figure class="panel">
+    <img src="convertible.jpg" alt="Cartoon of a white convertible with the top down in the snow, the driver holding coffee and a laptop buckled into the passenger seat" width="1024" height="768" loading="lazy">
+    <figcaption>Where it started: top down, 8,500 ft, November.</figcaption>
+  </figure>
+</div>
+
+<section class="wrap" id="crew">
+  <h2>Meet the crew</h2>
+  <p class="sub">Eight regulars, one battered two-stroke, and a fleet of mountain sleds.</p>
+  <div class="crew">
+    <figure class="snap"><div class="ph"><img src="ridge-glider.jpg" alt="Ridge Glider in an orange and black riding suit and mirrored goggles, holding coffee" loading="lazy"></div>
+      <h3>Ridge Glider</h3><div class="role">The mountain pilot</div>
+      <p>Unbothered, sensory-first, and always holding a coffee. Thinks "minus fourteen" means fresh powder.</p><span class="sled">Polaris Boost · orange &amp; black</span></figure>
+    <figure class="snap"><div class="ph"><img src="angel.jpg" alt="Angel, a cartoon laptop with big eyes, a cyan smile, a neck gaiter and little orange boots" loading="lazy"></div>
+      <h3>Angel</h3><div class="role">Tactical laptop co-pilot</div>
+      <p>Deadpan, hyper-calculating, quietly affectionate. Rides in a heated dash mount and keeps the telemetry honest.</p><span class="sled">Ridge's dash mount</span></figure>
+    <figure class="snap"><div class="ph"><img src="mama-hen.jpg" alt="Mama Hen in a burgundy puffer jacket and gold hoops, holding a mug on a cabin porch" loading="lazy"></div>
+      <h3>Mama Hen</h3><div class="role">The matriarch</div>
+      <p>Warm, glamorous and fully in charge. Rides when she feels like it. Would rather be at the casino.</p><span class="sled">Polaris 9R · pink &amp; black</span></figure>
+    <figure class="snap"><div class="ph"><img src="medusa.jpg" alt="Medusa in a teal, pink and purple Sledettes riding suit with braids flying from her helmet" loading="lazy"></div>
+      <h3>Medusa</h3><div class="role">Leader of the Sledettes</div>
+      <p>Fierce, fast and Ridge's equal on the mountain. Will tell you Angel was driving.</p><span class="sled">Polaris Boost · teal &amp; pink</span></figure>
+    <figure class="snap"><div class="ph"><img src="anvill.jpg" alt="Anvill in a camo cap and black tee with tattooed arms, standing in front of his custom shop" loading="lazy"></div>
+      <h3>Anvill</h3><div class="role">Master fabricator</div>
+      <p>Runs the Big Shop. Built the trailer, so it'd be rude not to haul it. Swaps a drive belt in seconds.</p><span class="sled">Polaris 9R · black &amp; red</span></figure>
+    <figure class="snap"><div class="ph"><img src="trail-boss.jpg" alt="Trail Boss in a red and black medical jacket and chest harness, holding a radio" loading="lazy"></div>
+      <h3>Trail Boss</h3><div class="role">Trauma nurse &amp; mountain marshal</div>
+      <p>Sharp, loving and done with your nonsense. Not setting your femur at twelve thousand feet.</p><span class="sled">Polaris 9R · black &amp; pink</span></figure>
+    <figure class="snap"><div class="ph"><img src="hillbilly.jpg" alt="Hillbilly in plaid flannel beside a battered old snowmobile trailing blue smoke" loading="lazy"></div>
+      <h3>Hillbilly</h3><div class="role">Two-stroke hustler</div>
+      <p>Twenty-one, broke as a joke, and agonising over lot rent versus powder. Powder usually wins.</p><span class="sled">1989 barn-find clunker</span></figure>
+    <figure class="snap"><div class="ph todo">Render<br>coming soon</div>
+      <h3>Zeke the Logger</h3><div class="role">Gentle giant</div>
+      <p>Hillbilly's cousin. Slow, deep and stoic. Can deadlift a stuck snowmobile with his bare hands.</p><span class="sled">Polaris RMK Pro · blue</span></figure>
+  </div>
+</section>
+
+<section class="wrap" id="episode-1">
+  <div class="eyebrow">Episode 1 · in production</div>
+  <h2>The Run to Tincup</h2>
+  <p class="sub">First storm of the year. One shop, one convoy, one pass over the Continental Divide, and a hot spring waiting at the end.</p>
+  <div class="route" role="region" aria-label="Episode 1 route" tabindex="0">
+    <ol>
+      <li><span class="n">01</span><b>The Big Shop</b><span class="el">Park County</span><p>Trailers loaded, thermoses filled, avalanche advisory reads simply "DON'T."</p></li>
+      <li><span class="n">02</span><b>Chalk Creek</b><span class="el">CR 162</span><p>The convoy rolls past the steaming pools. Hillbilly asks for a dip. Denied.</p></li>
+      <li><span class="n">03</span><b>St. Elmo</b><span class="el">10,000 ft</span><p>The plowed road ends in an eight-foot bank. Sleds off the trailer.</p></li>
+      <li><span class="n">04</span><b>Tincup Pass</b><span class="el">12,154 ft</span><p>A shredded belt, a bare-handed deadlift, and a tie race to the Divide.</p></li>
+      <li><span class="n">05</span><b>Tincup</b><span class="el">10,157 ft</span><p>A town buried to its eaves. Wi-Fi: a distant memory.</p></li>
+      <li><span class="n">06</span><b>The Hot Springs</b><span class="el">Mount Princeton</span><p>Steam, snow, cold beer, and a tiny espresso under a tiki umbrella.</p></li>
+    </ol>
+  </div>
+  <blockquote class="quote">"Current telemetry on Tincup Pass: fourteen below, winds at forty-two knots, visibility thirty feet, and the local avalanche advisory is simply the word: DON'T."<cite>Angel, Episode 1</cite></blockquote>
+</section>
+
+<section class="wrap">
+  <div class="channel">
+    <div><h2>Ride along on YouTube</h2><p>Episodes land on the channel first. Subscribe so you don't miss the pilot.</p></div>
+    <a class="cta" href="https://www.youtube.com/@RidgeGliderShow">@RidgeGliderShow</a>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">Ridge Glider &amp; Angel is an independent animated comedy made in Park County, Colorado. Characters are affectionate cartoons of real riding friends. Not affiliated with Polaris or any other brand shown.</footer>
+</body>
+</html>
