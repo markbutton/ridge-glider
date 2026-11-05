@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Episode 1 Storyboards · Ridge Glider &amp; Angel</title>
+<meta name="description" content="Visual storyboards and production keyframes for Episode 1: 'The Run to Tincup'. Strict 2D construction-paper cutout collage animation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500;700&display=swap">
+<style>
+:root{
+  --paper:#f2efe6; --card:#fffdf6; --ink:#1f2a26; --muted:#5b6862; --rule:#d8d3c4;
+  --pine:#24493d; --blaze:#e2601c; --cyan:#0f8ea0; --sky:#8fd0ec;
+  --display:"Bowlby One","Arial Black",Impact,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --paper:#131917; --card:#1c2421; --ink:#eaeee8; --muted:#9daaa3; --rule:#2d3934;
+  --pine:#86c7ae; --blaze:#ff8a4c; --cyan:#53d4e4; --sky:#1e3a46; color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 var(--body);
+  background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1px);background-size:5px 5px}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--cyan);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+
+header.top-nav{background:var(--card);border-bottom:1px solid var(--rule);padding:14px 0}
+.nav-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.nav-bar a.brand{font:400 20px/1 var(--display);color:var(--pine);text-decoration:none}
+.nav-bar a.brand span{color:var(--cyan)}
+.nav-links{display:flex;gap:20px;align-items:center;font:500 14px/1 var(--mono)}
+.nav-links a{color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.nav-links a:hover{color:var(--blaze)}
+.nav-links a.active{color:var(--blaze);font-weight:700}
+
+.hero-sub{padding-block:48px 24px}
+.eyebrow{font:700 13px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--blaze);margin-bottom:8px}
+h1{font:400 clamp(36px,5.5vw,56px)/1.08 var(--display);color:var(--pine);margin:0 0 12px;text-wrap:balance}
+.lede{font-size:20px;max-width:44em;color:var(--muted);margin:0 0 24px}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(500px,1fr));gap:38px 30px;padding-block:16px 64px}
+@media (max-width:640px){.gallery{grid-template-columns:1fr}}
+
+.shot-card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:14px;box-shadow:0 6px 18px rgba(0,0,0,.12);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.shot-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.16)}
+.shot-card:nth-child(even){transform:rotate(0.5deg)}
+.shot-card:nth-child(odd){transform:rotate(-0.5deg)}
+.shot-card:hover{transform:rotate(0) scale(1.01)}
+
+.shot-media{border-radius:6px;overflow:hidden;background:#000;aspect-ratio:16/9;position:relative}
+.shot-media img{width:100%;height:100%;object-fit:cover}
+
+.shot-meta{display:flex;align-items:center;justify-content:space-between;margin:14px 0 6px;gap:12px;flex-wrap:wrap}
+.badge{font:700 12px/1 var(--mono);padding:5px 8px;border-radius:4px;background:var(--pine);color:#fff;text-transform:uppercase;letter-spacing:.08em}
+.badge.act-2{background:var(--blaze)}
+.badge.act-3{background:var(--cyan)}
+.location{font:500 13px/1 var(--mono);color:var(--muted)}
+
+h2.shot-title{font:400 22px/1.2 var(--display);color:var(--pine);margin:4px 0 8px}
+p.shot-desc{font-size:16px;line-height:1.5;color:var(--ink);margin:0 0 12px;flex-grow:1}
+blockquote.quote{margin:0;padding:10px 14px;background:var(--paper);border-left:3px solid var(--cyan);font:italic 400 14.5px/1.45 var(--body);color:var(--muted);border-radius:0 4px 4px 0}
+blockquote.quote b{color:var(--ink);font-style:normal}
+
+footer{background:var(--pine);color:#fff;padding-block:48px;margin-top:40px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+footer a{color:#fff;text-decoration:underline}
+footer p{margin:0;opacity:.85;font-size:15px}
+</style>
+</head>
+<body>
+
+<header class="top-nav">
+  <div class="wrap nav-bar">
+    <a href="index.html" class="brand">Ridge Glider <span>&amp; Angel</span></a>
+    <nav class="nav-links">
+      <a href="index.html">← Back to Main</a>
+      <a href="scenes.html" class="active">Scene Reel</a>
+      <a href="https://www.youtube.com/@RidgeGliderShow" target="_blank">YouTube ▶</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero-sub">
+    <div class="eyebrow">Visual Storyboard · Episode 1 in Production</div>
+    <h1>The Run to Tincup</h1>
+    <p class="lede">From The Big Shop in Park County, past the steaming mineral pools of Mount Princeton, to staging in the ghost town of St. Elmo at 10,000 feet. Every locked keyframe in strict 2D construction-paper cutout collage animation.</p>
+  </div>
+
+  <div class="gallery">
+
+    <!-- Shot 1.1 -->
+    <article class="shot-card">
+      <div class="shot-media">
+        <img src="scene-1-1.jpg" alt="Shot 1.1: The Big Shop Exterior at Anvill Customs in Park County" loading="lazy">
+      </div>
+      <div class="shot-meta">
+        <span class="badge">Scene 01 · Shot 1.1</span>
+        <span class="location">Park County · 8,500 ft</span>
+      </div>
+      <h2 class="shot-title">The Big Shop Exterior</h2>
+      <p class="shot-desc">Heavy paper snowflakes blanket the yard at Anvill Customs. Anvill's lifted sand-tan 4x4 pickup truck idles beside his tall custom enclosed trailer, while Ridge Glider's 2014 Camaro convertible sits stubbornly top-down in the freezing snow.</p>
+      <blockquote class="quote"><b>Ridge Glider:</b> "If the sky is open, the top is down. Air conditioning is free in Colorado."</blockquote>
+    </article>
+
+    <!-- Shot 1.2 -->
+    <article class="shot-card">
+      <div class="shot-media">
+        <img src="scene-1-2.jpg" alt="Shot 1.2: The Big Shop Interior Master" loading="lazy">
+      </div>
+      <div class="shot-meta">
+        <span class="badge">Scene 01 · Shot 1.2</span>
+        <span class="location">Anvill Customs Bay</span>
+      </div>
+      <h2 class="shot-title">The Master Interior</h2>
+      <p class="shot-desc">Anvill locks down his custom Polaris 9R in the shop bay with yellow ratchet straps. Ridge Glider sips boiling coffee in his 509 helmet and peak-reflection goggles, while Angel monitors telemetry from the steel workbench in her miniature Klim BOA boots.</p>
+      <blockquote class="quote"><b>Angel:</b> "Current telemetry on Tincup Pass: fourteen below, sustained winds forty-two knots, and the avalanche advisory is simply: 'DON'T.'"</blockquote>
+    </article>
+
+    <!-- Shot 1.5 -->
+    <article class="shot-card">
+      <div class="shot-media">
+        <img src="scene-1-5.jpg" alt="Shot 1.5: Trail Boss Entrance" loading="lazy">
+      </div>
+      <div class="shot-meta">
+        <span class="badge">Scene 01 · Shot 1.5</span>
+        <span class="location">Anvill Customs Bay</span>
+      </div>
+      <h2 class="shot-title">Trail Boss Takes the Bench</h2>
+      <p class="shot-desc">High-stakes ER trauma nurse and mountain marshal Trail Boss slams her heavy medical go-bag onto the bench with an affectionate, radiant grin—ready with trauma shears the second Ridge Glider's bravado defies gravity.</p>
+      <blockquote class="quote"><b>Trail Boss:</b> "Ridge, I just clocked twelve hours in the ER stitching weekend warriors together. I am NOT splinting your femur at twelve thousand feet in a whiteout."</blockquote>
+    </article>
+
+    <!-- Shot 1.6 -->
+    <article class="shot-card">
+      <div class="shot-media">
+        <img src="scene-1-6.jpg" alt="Shot 1.6: Hillbilly and Woody Two-Stroke Entrance" loading="lazy">
+      </div>
+      <div class="shot-meta">
+        <span class="badge">Scene 01 · Shot 1.6</span>
+        <span class="location">Anvill Customs Bay</span>
+      </div>
+      <h2 class="shot-title">The Blue Smoke Entrance</h2>
+      <p class="shot-desc">Billows of opaque pale-blue two-stroke exhaust roll through the roll-up bay door. Tall Hillbilly coughs violently in comic lot-rent panic clutching his wrench and baling wire, while compact Woody strolls in deadpan-carrying Hillbilly's green snowmobile hood under his arm like a folded newspaper.</p>
+      <blockquote class="quote"><b>Woody:</b> "Told ya, cuz. But Ridge said 'blower powder' and Ridge bought the two-stroke oil... Hey Ridge, you need a cord of wood?"</blockquote>
+    </article>
+
+    <!-- Shot 1.7 -->
+    <article class="shot-card">
+      <div class="shot-media">
+        <img src="scene-1-7.jpg" alt="Shot 1.7: Medusa and SledRats Arrival" loading="lazy">
+      </div>
+      <div class="shot-meta">
+        <span class="badge">Scene 01 · Shot 1.7</span>
+        <span class="location">Anvill Customs Bay Door</span>
+      </div>
+      <h2 class="shot-title">Medusa &amp; The SledRats Arrival</h2>
+      <p class="shot-desc">Medusa roars up to the bay door on her custom teal-and-pink Polaris Boost, stepping off with her signature serpentine braids whipping and cat-eye goggles pushed up with a competitive mountain smirk to challenge Ridge Glider to the Continental Divide.</p>
+      <blockquote class="quote"><b>Medusa:</b> "SledRats already drew straws for who gets to tow Ridge Glider when he buries his front bumper. Just like Georgia Pass when you tried to shake us on a super jump."</blockquote>
+    </article>
+
+    <!-- Shot 1.8 -->
+    <article class="shot-card">
+      <div class="shot-media">
+        <img src="scene-1-8.jpg" alt="Shot 1.8: Mama Hen Entrance" loading="lazy">
+      </div>
+      <div class="shot-meta">
+        <span class="badge">Scene 01 · Shot 1.8</span>
+        <span class="location">The Big Shop</span>
+      </div>
+      <h2 class="shot-title">Mama Hen's Entrance</h2>
+      <p class="shot-desc">The glamorous cabin matriarch enters from the back office in her luxury burgundy faux-fur puffer jacket and gold hoops, setting down a 4-gallon commercial stainless coffee urn with total authority while affectionately plucking a stray snowflake off Ridge Glider's collar.</p>
+      <blockquote class="quote"><b>Mama Hen:</b> "Sixteen years since that little lounge in Iowa, Ridge Glider, and you still think hot air and mountain swagger keep you warm. Drink your coffee before I drag you back to the cabin."</blockquote>
+    </article>
+
+    <!-- Scene 2 -->
+    <article class="shot-card">
+      <div class="shot-media">
+        <img src="scene-2.jpg" alt="Scene 2: Convoy Passing Mount Princeton Hot Springs" loading="lazy">
+      </div>
+      <div class="shot-meta">
+        <span class="badge act-2">Scene 02</span>
+        <span class="location">Chalk Creek · CR 162 · 8,250 ft</span>
+      </div>
+      <h2 class="shot-title">Chalk Creek &amp; The Hot Springs</h2>
+      <p class="shot-desc">The truck and trailer convoy rolls west beneath the sheer white Chalk Cliffs. Plumes of mineral steam billow into the sub-zero air as tourists in plush terrycloth bathrobes hold wine glasses, staring open-mouthed at the rumbling snowmobile armada.</p>
+      <blockquote class="quote"><b>Hillbilly (over CB):</b> "Hey Ridge! Them hot springs look mighty warm! Sure we can't take a quick dip?!"<br><b>Ridge Glider:</b> "Earn the soak first, Hillbilly! St. Elmo is ahead!"</blockquote>
+    </article>
+
+    <!-- Scene 3 -->
+    <article class="shot-card">
+      <div class="shot-media">
+        <img src="scene-3-1.jpg" alt="Scene 3: St. Elmo Ghost Town Staging Keyframe" loading="lazy">
+      </div>
+      <div class="shot-meta">
+        <span class="badge act-3">Scene 03 · Shot 3.1</span>
+        <span class="location">St. Elmo Ghost Town · 10,000 ft</span>
+      </div>
+      <h2 class="shot-title">St. Elmo Ghost Town Staging</h2>
+      <p class="shot-desc">The plowed road ends dead in an 8-foot snowbank in front of 1880s false-front mining storefronts. Anvill drops the heavy aluminum trailer ramp into the snowpack, the fleet of mountain sleds idles in the powder with Angel mounted to Ridge's dash, and Droney buzzes overhead to film the 4K launch.</p>
+      <blockquote class="quote"><b>Angel:</b> "Telemetry synced. Droney deployed. If you yard-sale on camera today, Daddy, at least your subscribers will get sixty frames per second in 4K."</blockquote>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p><strong>Ridge Glider &amp; Angel</strong> · A paper-cutout animated comedy from Park County, Colorado.</p>
+      <p>Top stays down. <a href="index.html">Return to Home</a></p>
+    </div>
+    <div>
+      <a href="https://www.youtube.com/@RidgeGliderShow" target="_blank">Watch on YouTube @RidgeGliderShow ▶</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
