@@ -59,6 +59,10 @@ h2{font:400 clamp(28px,4vw,40px)/1.05 var(--display);color:var(--pine);margin:0 
 .snap h3{font:400 21px/1.1 var(--display);margin:14px 0 2px}
 .role{font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blaze);margin:0 0 8px}
 .snap p{margin:0;font-size:16px;line-height:1.5}
+.snap .lore{margin-top:12px;font-size:14px;line-height:1.45;color:var(--muted);border-top:1px dashed var(--rule);padding-top:8px}
+.snap .lore summary{font:700 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--blaze);cursor:pointer;margin-bottom:6px;user-select:none}
+.snap .lore summary:hover{color:var(--pine)}
+.snap .lore p{font-size:13.5px;line-height:1.4;margin:4px 0 0;color:var(--ink)}
 .sled{display:inline-block;margin-top:10px;font:500 12px/1 var(--mono);padding:5px 8px;border:1px solid var(--rule);border-radius:4px;color:var(--muted)}
 .route{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:26px 24px;overflow-x:auto}
 .route ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(140px,1fr));gap:0;min-width:840px;position:relative}
@@ -103,28 +107,68 @@ footer{padding-block:48px 56px;color:var(--muted);font-size:14px}
   <div class="crew">
     <figure class="snap"><div class="ph"><img src="ridge-glider.jpg" alt="Ridge Glider in an orange and black riding suit and mirrored goggles, holding coffee" loading="lazy"></div>
       <h3>Ridge Glider</h3><div class="role">The mountain pilot</div>
-      <p>Drives a convertible with the top down in sub-zero blizzards because "putting the top up ruins the aerodynamics." Never takes off his chrome goggles, drinks boiling black coffee while jumping cornices, and views avalanche warnings as mild social suggestions. Mountain physics have tried to kill him for twenty years; he just buys them a round.</p><span class="sled">Polaris Boost · orange &amp; black</span></figure>
+      <p>Drives a convertible with the top down in sub-zero blizzards because "putting the top up ruins the aerodynamics." Never takes off his chrome goggles, drinks boiling black coffee while jumping cornices, and views avalanche warnings as mild social suggestions. Mountain physics have tried to kill him for twenty years; he just buys them a round.</p>
+      <details class="lore">
+        <summary>Slednecks Lore</summary>
+        <p>In 2002, attempted a 110-foot road gap across Kenosha Pass on an old leaf-spring triple and landed directly in a CDOT salt spreader. When the highway crew ran up thinking he was dead, Ridge asked if they had any fresh Colombian roast.</p>
+      </details>
+      <span class="sled">Polaris Boost · orange &amp; black</span></figure>
     <figure class="snap"><div class="ph"><img src="angel.jpg" alt="Angel, a cartoon laptop with big eyes, a cyan smile, a neck gaiter and little orange boots" loading="lazy"></div>
       <h3>Angel</h3><div class="role">Tactical laptop co-pilot</div>
-      <p>A tactical laptop bolted to Ridge’s dashboard with a glowing cyan grin and zero filter. Runs real-time telemetry, calculates the exact mathematical probability of catastrophic disaster, and openly roasts Ridge Glider’s life choices. Her favorite morning weather report is simply screaming: "DON'T."</p><span class="sled">Ridge's dash mount</span></figure>
+      <p>A tactical laptop bolted to Ridge’s dashboard with a glowing cyan grin and zero filter. Runs real-time telemetry, calculates the exact mathematical probability of catastrophic disaster, and openly roasts Ridge Glider’s life choices. Her favorite morning weather report is simply screaming: "DON'T."</p>
+      <details class="lore">
+        <summary>Slednecks Lore</summary>
+        <p>Originally a mil-spec ballistics computer swept 3,000 feet down Loveland Pass by a Class 4 avalanche and frozen in glacial ice for months. Anvill chipped her out with a chisel, wired her to a 12V stator, and she booted up with her cyan grin intact.</p>
+      </details>
+      <span class="sled">Ridge's dash mount</span></figure>
     <figure class="snap"><div class="ph"><img src="mama-hen.jpg" alt="Mama Hen in a burgundy puffer jacket and gold hoops, holding a mug on a cabin porch" loading="lazy"></div>
       <h3>Mama Hen</h3><div class="role">The matriarch &amp; anchor</div>
-      <p>The glamorous cabin queen who rules Park County with giant gold hoops, an iron fist, and a 4-gallon coffee urn strong enough to jump-start a tractor. Can spot a frostbitten knuckle through two doors and will drag a grown 200-pound man out by his collar if he dares track slush onto her dry cabin floor.</p><span class="sled">Polaris 9R · pink &amp; black</span></figure>
+      <p>The glamorous cabin queen who rules Park County with giant gold hoops, an iron fist, and a 4-gallon coffee urn strong enough to jump-start a tractor. Can spot a frostbitten knuckle through two doors and will drag a grown 200-pound man out by his collar if he dares track slush onto her dry cabin floor.</p>
+      <details class="lore">
+        <summary>Slednecks Lore</summary>
+        <p>In the Blizzard of 2007, when two utility linemen got stranded on Mosquito Pass in a 60-mph gale, Mama Hen fired up an un-governed Polaris, rode through zero-visibility drifts in her gold hoops, and hauled them out on a rescue sled with hot chicken soup.</p>
+      </details>
+      <span class="sled">Polaris 9R · pink &amp; black</span></figure>
     <figure class="snap"><div class="ph"><img src="medusa.jpg" alt="Medusa in a teal and magenta SledRats suit with serpentine braids flying from her helmet" loading="lazy"></div>
       <h3>Medusa</h3><div class="role">Leader of the SledRats</div>
-      <p>Fearless leader of the SledRats with neon gear, viper braids flying out of her helmet, and an ego twice as tall as Mt. Princeton. Lives to sidehill across 60-degree powder chutes backwards just to laugh at Ridge Glider. The only thing louder than her twin-pipe exhaust is her cackling when someone buries their front bumper.</p><span class="sled">Polaris Boost · teal &amp; pink</span></figure>
+      <p>Fearless leader of the SledRats with neon gear, viper braids flying out of her helmet, and an ego twice as tall as Mt. Princeton. Lives to sidehill across 60-degree powder chutes backwards just to laugh at Ridge Glider. The only thing louder than her twin-pipe exhaust is her cackling when someone buries their front bumper.</p>
+      <details class="lore">
+        <summary>Slednecks Lore</summary>
+        <p>When her high school boyfriend told her snowmobiles were "too violent for girls," she took his modified 800 triple, rode it straight up the steepest chute on Guanella Pass, carved a 360 on the cornice, and never spoke to him again.</p>
+      </details>
+      <span class="sled">Polaris Boost · teal &amp; pink</span></figure>
     <figure class="snap"><div class="ph"><img src="anvill.jpg" alt="Anvill in a camo cap and black tee with tattooed arms, standing in front of his custom shop" loading="lazy"></div>
       <h3>Anvill</h3><div class="role">Master fabricator</div>
-      <p>Full-sleeve tattoos, zero indoor voice, and a garage that smells permanently of burnt tungsten and 110-octane race fuel. If a sled is broken, he fixes it with an angle grinder and an attitude; if it isn’t broken, he chops it in half until it goes fifty miles an hour faster. Built a trailer so big it needs an oversized-load permit to back out of his driveway.</p><span class="sled">Polaris 9R · black &amp; red</span></figure>
+      <p>Full-sleeve tattoos, zero indoor voice, and a garage that smells permanently of burnt tungsten and 110-octane race fuel. If a sled is broken, he fixes it with an angle grinder and an attitude; if it isn’t broken, he chops it in half until it goes fifty miles an hour faster. Built a trailer so big it needs an oversized-load permit to back out of his driveway.</p>
+      <details class="lore">
+        <summary>Slednecks Lore</summary>
+        <p>Once welded a cracked aluminum cylinder head in a motel parking lot in West Yellowstone at 2:00 AM using two car batteries and a bent coat hanger so his crew wouldn't miss first tracks. His shop trailer has radiant floor heat and an espresso bar.</p>
+      </details>
+      <span class="sled">Polaris 9R · black &amp; red</span></figure>
     <figure class="snap"><div class="ph"><img src="trail-boss.jpg" alt="Trail Boss in her black and alpine-pink technical suit with trauma shears and radio" loading="lazy"></div>
       <h3>Trail Boss</h3><div class="role">Trauma nurse &amp; mountain marshal</div>
-      <p>High-stakes ER trauma nurse who spends her weekends babysitting five adrenaline junkies through avalanche country like an armed mother duck. Ribs the boys with an affectionate, radiant smile while fingering her chest-mounted trauma shears, mentally timing how long until someone snaps a collarbone trying to impress Medusa.</p><span class="sled">Polaris 9R · black &amp; pink</span></figure>
+      <p>High-stakes ER trauma nurse who spends her weekends babysitting five adrenaline junkies through avalanche country like an armed mother duck. Ribs the boys with an affectionate, radiant smile while fingering her chest-mounted trauma shears, mentally timing how long until someone snaps a collarbone trying to impress Medusa.</p>
+      <details class="lore">
+        <summary>Slednecks Lore</summary>
+        <p>Former flight-rescue trauma nurse who put herself through nursing school by logging timber in summer and ski patrolling in winter. The only person on the mountain who can freeze Anvill with a glare or slap Ridge upside his 509 helmet.</p>
+      </details>
+      <span class="sled">Polaris 9R · black &amp; pink</span></figure>
     <figure class="snap"><div class="ph"><img src="hillbilly.jpg?v=5" alt="Hillbilly in a blue plaid flannel, suspenders, shaggy dirty-blond beard, wrench and baling wire" loading="lazy"></div>
       <h3>Hillbilly</h3><div class="role">Two-stroke hustler</div>
-      <p>Twenty-one, ruggedly handsome, and perpetually thirty-six hours away from his mobile home lot rent being overdue. Keeps an ancient 1989 two-stroke alive on starting fluid, stolen baling wire, and pure hillbilly voodoo. His clunker sounds like a chainsaw in a blender and pumps enough toxic blue smoke to wipe out local mosquitos until 2035.</p><span class="sled">1989 barn-find clunker</span></figure>
+      <p>Twenty-one, ruggedly handsome, and perpetually thirty-six hours away from his mobile home lot rent being overdue. Keeps an ancient 1989 two-stroke alive on starting fluid, stolen baling wire, and pure hillbilly voodoo. His clunker sounds like a chainsaw in a blender and pumps enough toxic blue smoke to wipe out local mosquitos until 2035.</p>
+      <details class="lore">
+        <summary>Slednecks Lore</summary>
+        <p>At age twelve, rigged a lawnmower engine to a Radio Flyer wagon and jumped it off a hay barn into a snowbank. His 1989 sled is built from four salvage titles, held together with baling wire, and the speedometer has been stuck at 88 mph since 1991.</p>
+      </details>
+      <span class="sled">1989 barn-find clunker</span></figure>
     <figure class="snap"><div class="ph"><img src="woody.jpg?v=4" alt="Woody in a vintage Ford ballcap, buffalo plaid, and full logger beard" loading="lazy"></div>
       <h3>Woody</h3><div class="role">Quiet powerhouse</div>
-      <p>Hillbilly’s stoic timber-bucking cousin. Speaks about twelve words a month, wears an old Ford cap pulled down to his bushy logger beard, and possesses terrifying tractor-grade farm strength. When a sled gets buried in six feet of powder, nobody grabs a shovel—they just point Woody at the rear bumper and get out of the blast radius.</p><span class="sled">Polaris RMK Pro · blue</span></figure>
+      <p>Hillbilly’s stoic timber-bucking cousin. Speaks about twelve words a month, wears an old Ford cap pulled down to his bushy logger beard, and possesses terrifying tractor-grade farm strength. When a sled gets buried in six feet of powder, nobody grabs a shovel—they just point Woody at the rear bumper and get out of the blast radius.</p>
+      <details class="lore">
+        <summary>Slednecks Lore</summary>
+        <p>Legendary backcountry golem who didn't speak until age seven, when he pointed at a stuck Caterpillar bulldozer and grunted "Push." Once bear-hugged an 850-pound utility snowmobile stuck in a slush hole and deadlifted it clean onto the bank without losing his Ford cap.</p>
+      </details>
+      <span class="sled">Polaris RMK Pro · blue</span></figure>
   </div>
 </section>
 
